@@ -106,10 +106,6 @@ def create_model(args):
         time_sequence_length=time_sequence_length,
         crop_size=236,
         use_token_learner=True,
-        film_efficientnet_weights='imagenet',
-        film_efficientnet_freeze=False,
-        use_action_input=True,
-        only_last_action_loss=False,
         action_order=['terminate_episode', 'effector_target_translation'])
     return network
 

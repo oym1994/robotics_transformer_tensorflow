@@ -52,3 +52,23 @@ More components may come in future releases.
 
 The Robotics Transformer library is licensed under the terms of the Apache
 license.
+
+## 新增内容
+本工程来自于google的robotics transformer工作，在此基础上增加了:
+    
+    1,读取rlds数据，以language table为例
+    2,增加分布式训练代码
+   
+## 训练
+    step1, 下载language_table数据, 见https://github.com/google-research/language-table
+    step2, 下载Universal Sentence Encoder模型，将数据集中的文本(UTF-8)转化成USE embedding，依然是RLDS格式
+    step3, 设置distribute_train.py里的变量
+    step4, 开启训练 python distribute_train.py
+
+## 未来工作
+    1, 使用RT1开源的数据集进行训练，编写相应数据加载代码;
+    2, 使用梯度累积，混合精度训练，增加单卡batch_size;
+    3, 融合更多传感器信息，如深度等;
+    抛砖引玉，欢迎大家提pull request
+
+   
